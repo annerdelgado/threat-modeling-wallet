@@ -30,16 +30,16 @@
             "zIndex": 5,
             "visible": true,
             "position": {
-              "x": 80,
-              "y": 180
+              "x": 60,
+              "y": 70
             },
             "size": {
-              "width": 160,
+              "width": 200,
               "height": 80
             },
             "attrs": {
               "text": {
-                "text": "Usuario Móvil"
+                "text": "EE-01: Usuario Móvil"
               },
               "body": {
                 "stroke": "#333333",
@@ -113,24 +113,258 @@
               "items": [
                 {
                   "group": "top",
-                  "id": "7503c06d-ac0d-4952-890e-85cb61951476"
+                  "id": "2a72bac2-3777-409e-a896-61ab423dd10f"
                 },
                 {
                   "group": "right",
-                  "id": "634ffe06-2a64-4cf6-9bd5-af7707170c73"
+                  "id": "4a4faa3a-d5cc-46d0-a8c9-a8ffb96988d2"
                 },
                 {
                   "group": "bottom",
-                  "id": "de019eea-1ffe-4107-8fa8-2ae1d617e50f"
+                  "id": "4e5bfea7-9443-4634-9e89-2109491ab778"
                 },
                 {
                   "group": "left",
-                  "id": "1bf0401d-d66b-45fa-bfd1-53263674b9a3"
+                  "id": "3e2773bd-5eeb-45b7-a5d6-81a56e46c878"
                 }
               ]
             },
             "data": {
-              "name": "Usuario Móvil",
+              "name": "EE-01: Usuario Móvil",
+              "description": "",
+              "type": "tm.Actor",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "cell-ee-04",
+            "shape": "actor",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 60,
+              "y": 210
+            },
+            "size": {
+              "width": 200,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "EE-04: Administrador\nPlataforma"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "6eee271d-fdd4-4562-96b9-2a970136f913"
+                },
+                {
+                  "group": "right",
+                  "id": "110b59b0-d4d4-4508-b38c-015008225e20"
+                },
+                {
+                  "group": "bottom",
+                  "id": "9f420e8e-89ec-4ba0-b305-f1dbc51116b2"
+                },
+                {
+                  "group": "left",
+                  "id": "490efd85-6b26-4522-b5e4-b623937b56e2"
+                }
+              ]
+            },
+            "data": {
+              "name": "EE-04: Administrador\nPlataforma",
+              "description": "",
+              "type": "tm.Actor",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "cell-ee-03",
+            "shape": "actor",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 60,
+              "y": 350
+            },
+            "size": {
+              "width": 200,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "EE-03: Pasarela SMS /\nPush (Notific.)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "4dff8659-aedc-4c1b-8f5a-444c286c9201"
+                },
+                {
+                  "group": "right",
+                  "id": "47621e70-ee59-48b4-81e4-a8ae9800db29"
+                },
+                {
+                  "group": "bottom",
+                  "id": "eb1a9d51-7bc8-4b3b-855a-dd0595e38d65"
+                },
+                {
+                  "group": "left",
+                  "id": "bb906d27-a46e-4906-959b-7b9f9166bc9d"
+                }
+              ]
+            },
+            "data": {
+              "name": "EE-03: Pasarela SMS /\nPush (Notific.)",
               "description": "",
               "type": "tm.Actor",
               "isTrustBoundary": false,
@@ -147,16 +381,16 @@
             "zIndex": 5,
             "visible": true,
             "position": {
-              "x": 380,
-              "y": 180
+              "x": 610,
+              "y": 140
             },
             "size": {
-              "width": 160,
-              "height": 80
+              "width": 220,
+              "height": 220
             },
             "attrs": {
               "text": {
-                "text": "Sistema Billetera\nDigital"
+                "text": "P-00: SISTEMA\nSECUREPAY WALLET\n(Billetera Digital)"
               },
               "body": {
                 "stroke": "#333333",
@@ -230,24 +464,24 @@
               "items": [
                 {
                   "group": "top",
-                  "id": "b539b460-b902-4f4a-9821-3cc051ad82f1"
+                  "id": "24cbe21e-b5ba-47f6-967b-dff894bb2772"
                 },
                 {
                   "group": "right",
-                  "id": "524bb9f8-8b24-4ef7-a072-3350b922b156"
+                  "id": "b7e3ec4b-d65e-44d7-b18b-6e0c6b4d6a8b"
                 },
                 {
                   "group": "bottom",
-                  "id": "e3af32ec-ac61-4be8-9d9f-1319902a9d1a"
+                  "id": "dd169f21-1489-4c3c-bfc9-5caecae1ed3e"
                 },
                 {
                   "group": "left",
-                  "id": "ff70a7bc-d98f-40ef-bb53-3ed6f79c089f"
+                  "id": "fc14dd95-b84f-400a-9979-ca8e3b8f9297"
                 }
               ]
             },
             "data": {
-              "name": "Sistema Billetera\nDigital",
+              "name": "P-00: SISTEMA\nSECUREPAY WALLET\n(Billetera Digital)",
               "description": "",
               "type": "tm.Process",
               "isTrustBoundary": false,
@@ -263,16 +497,16 @@
             "zIndex": 5,
             "visible": true,
             "position": {
-              "x": 680,
-              "y": 180
+              "x": 620,
+              "y": 480
             },
             "size": {
-              "width": 160,
+              "width": 200,
               "height": 80
             },
             "attrs": {
               "text": {
-                "text": "Switch Bancario\n(ACH)"
+                "text": "EE-02: Core /\nSwitch Bancario"
               },
               "body": {
                 "stroke": "#333333",
@@ -346,24 +580,24 @@
               "items": [
                 {
                   "group": "top",
-                  "id": "1a430a49-faab-4bd9-b3bd-2130a353c505"
+                  "id": "e4332b76-690c-4179-8e2c-880a95d23e46"
                 },
                 {
                   "group": "right",
-                  "id": "7b524921-ce35-45a0-80f4-7dd2f2de2931"
+                  "id": "f5aec89b-3c27-4891-949a-2624035ae342"
                 },
                 {
                   "group": "bottom",
-                  "id": "d737e76a-8368-4fae-90ac-fb5f18eaa3b7"
+                  "id": "30f018f8-985e-4dc4-9a0e-e5c376c17d54"
                 },
                 {
                   "group": "left",
-                  "id": "c96586f7-3b6c-46ae-a379-8fe6c3abbe76"
+                  "id": "b80ba257-ac86-4ca7-aa7b-6d09bc159505"
                 }
               ]
             },
             "data": {
-              "name": "Switch Bancario\n(ACH)",
+              "name": "EE-02: Core /\nSwitch Bancario",
               "description": "",
               "type": "tm.Actor",
               "isTrustBoundary": false,
@@ -404,7 +638,7 @@
                 ],
                 "attrs": {
                   "labelText": {
-                    "text": "Internet Boundary",
+                    "text": "TB-01: Límite Perimetral Internet",
                     "textAnchor": "middle",
                     "textVerticalAnchor": "middle"
                   },
@@ -416,33 +650,112 @@
                     "strokeWidth": 0
                   }
                 },
-                "position": 0.5
+                "position": {
+                  "distance": 0.1,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
               }
             ],
             "source": {
-              "x": 280,
-              "y": 60
+              "x": 440,
+              "y": 30
             },
             "target": {
-              "x": 280,
-              "y": 360
+              "x": 440,
+              "y": 470
             },
             "vertices": [
               {
-                "x": 280,
-                "y": 210
+                "x": 440,
+                "y": 250
               }
             ],
             "data": {
               "type": "tm.Boundary",
-              "name": "Internet Boundary",
+              "name": "TB-01: Límite Perimetral Internet",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             }
           },
           {
-            "id": "flow-d0-01",
+            "id": "cell-tb-04",
+            "shape": "trust-boundary-curve",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeDasharray": "5 5",
+                "strokeWidth": 2,
+                "targetMarker": "",
+                "sourceMarker": ""
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "TB-04: Límite Integración Bancaria",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.25,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 480,
+              "y": 420
+            },
+            "target": {
+              "x": 920,
+              "y": 420
+            },
+            "vertices": [
+              {
+                "x": 700,
+                "y": 420
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "TB-04: Límite Integración Bancaria",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "id": "flow-f01",
             "shape": "flow",
             "zIndex": 10,
             "width": 200,
@@ -452,6 +765,9 @@
               "line": {
                 "stroke": "#333333",
                 "strokeWidth": 1,
+                "sourceMarker": {
+                  "name": "block"
+                },
                 "targetMarker": {
                   "name": "block"
                 },
@@ -472,7 +788,7 @@
                 ],
                 "attrs": {
                   "labelText": {
-                    "text": "Peticiones Móviles (HTTPS)",
+                    "text": "F-01: HTTPS / REST",
                     "textAnchor": "middle",
                     "textVerticalAnchor": "middle"
                   },
@@ -496,21 +812,21 @@
             "vertices": [],
             "data": {
               "type": "tm.Flow",
-              "name": "Peticiones Móviles (HTTPS)",
+              "name": "F-01: HTTPS / REST",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isBidirectional": true,
               "isEncrypted": true,
               "isPublicNetwork": false,
-              "protocol": "HTTPS",
+              "protocol": "HTTPS / REST",
               "isTrustBoundary": false,
               "threats": []
             }
           },
           {
-            "id": "flow-d0-02",
+            "id": "flow-f10",
             "shape": "flow",
             "zIndex": 10,
             "width": 200,
@@ -520,6 +836,7 @@
               "line": {
                 "stroke": "#333333",
                 "strokeWidth": 1,
+                "sourceMarker": null,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -540,7 +857,145 @@
                 ],
                 "attrs": {
                   "labelText": {
-                    "text": "Transacciones ACH (mTLS)",
+                    "text": "F-10: HTTPS / Admin",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "cell": "cell-ee-04"
+            },
+            "target": {
+              "cell": "cell-p-00"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F-10: HTTPS / Admin",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS / Admin",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-f08",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "sourceMarker": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "F-08: REST API",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "cell": "cell-p-00"
+            },
+            "target": {
+              "cell": "cell-ee-03"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F-08: REST API",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "REST API",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-f07",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "sourceMarker": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "F-07: mTLS / ISO-8583",
                     "textAnchor": "middle",
                     "textVerticalAnchor": "middle"
                   },
@@ -564,7 +1019,7 @@
             "vertices": [],
             "data": {
               "type": "tm.Flow",
-              "name": "Transacciones ACH (mTLS)",
+              "name": "F-07: mTLS / ISO-8583",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -572,7 +1027,7 @@
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": false,
-              "protocol": "mTLS",
+              "protocol": "mTLS / ISO-8583",
               "isTrustBoundary": false,
               "threats": []
             }
