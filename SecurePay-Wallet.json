@@ -1,0 +1,169 @@
+{
+    "summary": {
+        "title": "SecurePay Wallet Threat Model",
+        "owner": "Maestria en Seguridad Informatica",
+        "description": "Modelo de amenazas integral para billetera digital con integraciones bancarias bajo metodologia STRIDE.",
+        "id": 0
+    },
+    "detail": {
+        "contributors": [
+            {
+                "name": "Equipo de Seguridad en Aplicaciones"
+            }
+        ],
+        "diagrams": [
+            {
+                "title": "DFD Nivel 0 - Contexto General",
+                "id": 0,
+                "diagramType": "STRIDE",
+                "placeholder": "Diagrama de contexto general que delimita entidades externas, el sistema como caja negra y trust boundaries.",
+                "cells": [
+                    {
+                        "id": "cell-ee-01",
+                        "type": "tm.Actor",
+                        "name": "Usuario Móvil",
+                        "hasOpenThreats": true,
+                        "threats": []
+                    },
+                    {
+                        "id": "cell-p-00",
+                        "type": "tm.Process",
+                        "name": "Sistema Billetera Digital",
+                        "hasOpenThreats": true,
+                        "threats": []
+                    },
+                    {
+                        "id": "cell-ee-02",
+                        "type": "tm.Actor",
+                        "name": "Switch Bancario (ACH)",
+                        "hasOpenThreats": false,
+                        "threats": []
+                    },
+                    {
+                        "id": "cell-tb-01",
+                        "type": "tm.Boundary",
+                        "name": "Internet Boundary"
+                    }
+                ]
+            },
+            {
+                "title": "DFD Nivel 1 - Arquitectura de Plataforma",
+                "id": 1,
+                "diagramType": "STRIDE",
+                "placeholder": "Descomposicion de procesos principales, almacenes de datos y limites de confianza internos.",
+                "cells": [
+                    {
+                        "id": "cell-p-01",
+                        "type": "tm.Process",
+                        "name": "WAF & API Gateway",
+                        "hasOpenThreats": true,
+                        "threats": [
+                            {
+                                "title": "Agotamiento de Conexiones por DDoS (TH-09)",
+                                "status": "Open",
+                                "severity": "Medium",
+                                "type": "Denial of service",
+                                "description": "Saturación de workers mediante peticiones simultáneas no controladas.",
+                                "mitigation": "Habilitar Rate Limiting granular y throttling por token/IP en Gateway."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "cell-p-03",
+                        "type": "tm.Process",
+                        "name": "Motor Transaccional",
+                        "hasOpenThreats": true,
+                        "threats": [
+                            {
+                                "title": "Manipulación de Monto o Cuenta en Tránsito (TH-03)",
+                                "status": "Open",
+                                "severity": "Critical",
+                                "type": "Tampering",
+                                "description": "Alteración de payloads en tránsito entre Gateway y Motor Transaccional.",
+                                "mitigation": "Firma HMAC/DPoP del payload con llaves de enclave móvil y mTLS interno."
+                            },
+                            {
+                                "title": "Vaciado de Cuentas Ajenas por IDOR/BOLA (TH-10)",
+                                "status": "Open",
+                                "severity": "Critical",
+                                "type": "Elevation of privilege",
+                                "description": "Inyección de identificadores de cuenta arbitrarios no verificados en el backend.",
+                                "mitigation": "Validación estricta de claims del token JWT para resolver la cuenta origen."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "cell-ds-01",
+                        "type": "tm.Store",
+                        "name": "PostgreSQL Ledger DB",
+                        "hasOpenThreats": true,
+                        "threats": [
+                            {
+                                "title": "Inyección SQL en Capa Contable (TH-04)",
+                                "status": "Open",
+                                "severity": "High",
+                                "type": "Tampering",
+                                "description": "Manipulación de balances mediante entrada no sanitizada en sentencias de actualización.",
+                                "mitigation": "Uso estricto de sentencias preparadas parametrizadas en capa de persistencia."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "cell-ds-02",
+                        "type": "tm.Store",
+                        "name": "Redis Session & Lock Store",
+                        "hasOpenThreats": false,
+                        "threats": []
+                    }
+                ]
+            },
+            {
+                "title": "DFD Nivel 2 - Descomposición Motor Transaccional",
+                "id": 2,
+                "diagramType": "STRIDE",
+                "placeholder": "Descomposicion profunda del motor de pagos, validaciones criptograficas, cerrojos y adaptador bancario.",
+                "cells": [
+                    {
+                        "id": "cell-p-03-1",
+                        "type": "tm.Process",
+                        "name": "Validador de Payloads y Firmas",
+                        "hasOpenThreats": false,
+                        "threats": []
+                    },
+                    {
+                        "id": "cell-p-03-2",
+                        "type": "tm.Process",
+                        "name": "Gestor de Idempotencia y Cerrojos",
+                        "hasOpenThreats": true,
+                        "threats": [
+                            {
+                                "title": "Ataque de Doble Gasto por Concurrencia (TH-08)",
+                                "status": "Open",
+                                "severity": "Critical",
+                                "type": "Denial of service",
+                                "description": "Disparo múltiple de peticiones concurrentes para vaciar saldo por condición de carrera.",
+                                "mitigation": "Implementación de Redlock distribuido con TTL y bloqueos pesimistas en DB."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "cell-p-03-4",
+                        "type": "tm.Process",
+                        "name": "Adaptador ISO-8583",
+                        "hasOpenThreats": true,
+                        "threats": [
+                            {
+                                "title": "Falsificación de Enlace Interbancario (TH-02)",
+                                "status": "Open",
+                                "severity": "High",
+                                "type": "Spoofing",
+                                "description": "Desvío de transferencias hacia un switch falso por falla en validación X.509.",
+                                "mitigation": "mTLS estricto con validación de CN y certificado anclado (Pinning)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
