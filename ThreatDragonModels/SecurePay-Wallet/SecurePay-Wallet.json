@@ -1,0 +1,1991 @@
+{
+  "version": "2.3.0",
+  "summary": {
+    "title": "SecurePay-Wallet",
+    "owner": "Maestria en Seguridad Informatica",
+    "description": "Modelo de amenazas integral para billetera digital con integraciones bancarias bajo metodologia STRIDE.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Equipo de Seguridad en Aplicaciones"
+      }
+    ],
+    "reviewer": "Comité de Arquitectura de Seguridad",
+    "diagramTop": 3,
+    "threatTop": 7,
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "DFD Nivel 0 - Contexto General",
+        "diagramType": "STRIDE",
+        "placeholder": "Diagrama de contexto general que delimita entidades externas, el sistema como caja negra y trust boundaries.",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.3.0",
+        "cells": [
+          {
+            "id": "cell-ee-01",
+            "shape": "actor",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 80,
+              "y": 180
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Usuario Móvil"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "7503c06d-ac0d-4952-890e-85cb61951476"
+                },
+                {
+                  "group": "right",
+                  "id": "634ffe06-2a64-4cf6-9bd5-af7707170c73"
+                },
+                {
+                  "group": "bottom",
+                  "id": "de019eea-1ffe-4107-8fa8-2ae1d617e50f"
+                },
+                {
+                  "group": "left",
+                  "id": "1bf0401d-d66b-45fa-bfd1-53263674b9a3"
+                }
+              ]
+            },
+            "data": {
+              "name": "Usuario Móvil",
+              "description": "",
+              "type": "tm.Actor",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "cell-p-00",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 380,
+              "y": 180
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Sistema Billetera\nDigital"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "b539b460-b902-4f4a-9821-3cc051ad82f1"
+                },
+                {
+                  "group": "right",
+                  "id": "524bb9f8-8b24-4ef7-a072-3350b922b156"
+                },
+                {
+                  "group": "bottom",
+                  "id": "e3af32ec-ac61-4be8-9d9f-1319902a9d1a"
+                },
+                {
+                  "group": "left",
+                  "id": "ff70a7bc-d98f-40ef-bb53-3ed6f79c089f"
+                }
+              ]
+            },
+            "data": {
+              "name": "Sistema Billetera\nDigital",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "cell-ee-02",
+            "shape": "actor",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 680,
+              "y": 180
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Switch Bancario\n(ACH)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "1a430a49-faab-4bd9-b3bd-2130a353c505"
+                },
+                {
+                  "group": "right",
+                  "id": "7b524921-ce35-45a0-80f4-7dd2f2de2931"
+                },
+                {
+                  "group": "bottom",
+                  "id": "d737e76a-8368-4fae-90ac-fb5f18eaa3b7"
+                },
+                {
+                  "group": "left",
+                  "id": "c96586f7-3b6c-46ae-a379-8fe6c3abbe76"
+                }
+              ]
+            },
+            "data": {
+              "name": "Switch Bancario\n(ACH)",
+              "description": "",
+              "type": "tm.Actor",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "cell-tb-01",
+            "shape": "trust-boundary-curve",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeDasharray": "5 5",
+                "strokeWidth": 2,
+                "targetMarker": "",
+                "sourceMarker": ""
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "Internet Boundary",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "x": 280,
+              "y": 60
+            },
+            "target": {
+              "x": 280,
+              "y": 360
+            },
+            "vertices": [
+              {
+                "x": 280,
+                "y": 210
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internet Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "id": "flow-d0-01",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "Peticiones Móviles (HTTPS)",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "cell": "cell-ee-01"
+            },
+            "target": {
+              "cell": "cell-p-00"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "Peticiones Móviles (HTTPS)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d0-02",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "Transacciones ACH (mTLS)",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "cell": "cell-p-00"
+            },
+            "target": {
+              "cell": "cell-ee-02"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "Transacciones ACH (mTLS)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "mTLS",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "DFD Nivel 1 - Arquitectura de Plataforma",
+        "diagramType": "STRIDE",
+        "placeholder": "Descomposicion de procesos principales, almacenes de datos y limites de confianza internos.",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.3.0",
+        "cells": [
+          {
+            "id": "cell-p-01",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 80,
+              "y": 180
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "WAF & API Gateway"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "081872b9-64d8-48f6-9810-3824a7dc91a5"
+                },
+                {
+                  "group": "right",
+                  "id": "acd772cb-19f7-4f46-a5eb-4998508658a7"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3f73a211-71b1-4bd7-8cda-88d9d3163a18"
+                },
+                {
+                  "group": "left",
+                  "id": "e406868c-9d0a-460d-a864-78b27de94288"
+                }
+              ]
+            },
+            "data": {
+              "name": "WAF & API Gateway",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "8a5fa02b-5043-4ec7-a425-02b8f7c09a77",
+                  "threatId": "2bb83b11-d312-4eba-a5ae-05de013e8807",
+                  "number": 1,
+                  "title": "Agotamiento de Conexiones por DDoS (TH-09)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Saturación de workers mediante peticiones simultáneas no controladas.",
+                  "mitigation": "Habilitar Rate Limiting granular y throttling por token/IP en Gateway.",
+                  "modelType": "STRIDE",
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-p-03",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 380,
+              "y": 180
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Motor Transaccional"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "a5c162db-ef59-4413-a005-d56d890125a4"
+                },
+                {
+                  "group": "right",
+                  "id": "dc2dd8c5-7e40-4935-a71e-e33c3b19e870"
+                },
+                {
+                  "group": "bottom",
+                  "id": "8810547b-0bc1-409f-ab3b-3d5f98190046"
+                },
+                {
+                  "group": "left",
+                  "id": "7e92b829-2a9f-4e75-a6dc-73906fb4dcdf"
+                }
+              ]
+            },
+            "data": {
+              "name": "Motor Transaccional",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "65c60de1-75dc-47ce-bbbe-2e016a834fb9",
+                  "threatId": "f8a9fc1c-196d-48bb-a4d7-c44beed28e45",
+                  "number": 2,
+                  "title": "Manipulación de Monto o Cuenta en Tránsito (TH-03)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Alteración de payloads en tránsito entre Gateway y Motor Transaccional.",
+                  "mitigation": "Firma HMAC/DPoP del payload con llaves de enclave móvil y mTLS interno.",
+                  "modelType": "STRIDE",
+                  "score": "Critical (CVSS 9.0+)"
+                },
+                {
+                  "id": "88eab06b-aa93-4fda-89fe-cc5a975c1783",
+                  "threatId": "beda3ec3-6aef-4a08-8e9f-88232bcafede",
+                  "number": 3,
+                  "title": "Vaciado de Cuentas Ajenas por IDOR/BOLA (TH-10)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Inyección de identificadores de cuenta arbitrarios no verificados en el backend.",
+                  "mitigation": "Validación estricta de claims del token JWT para resolver la cuenta origen.",
+                  "modelType": "STRIDE",
+                  "score": "Critical (CVSS 9.0+)"
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-ds-01",
+            "shape": "store",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 680,
+              "y": 100
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "PostgreSQL Ledger DB"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2f0865dc-664d-4e8d-a3fa-566499832742"
+                },
+                {
+                  "group": "right",
+                  "id": "ed7314d4-79c2-48a0-8a23-48dfa757c4df"
+                },
+                {
+                  "group": "bottom",
+                  "id": "78facd99-385a-447b-a5c5-efc97e564a06"
+                },
+                {
+                  "group": "left",
+                  "id": "cdf45041-c0a7-49d4-b503-be5fd99dfa3a"
+                }
+              ]
+            },
+            "data": {
+              "name": "PostgreSQL Ledger DB",
+              "description": "",
+              "type": "tm.Store",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "threats": [
+                {
+                  "id": "b5815be7-7327-43b3-ae46-291561f0c74c",
+                  "threatId": "35c006e3-c8b4-4814-886e-7bcae79dc9d5",
+                  "number": 4,
+                  "title": "Inyección SQL en Capa Contable (TH-04)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Manipulación de balances mediante entrada no sanitizada en sentencias de actualización.",
+                  "mitigation": "Uso estricto de sentencias preparadas parametrizadas en capa de persistencia.",
+                  "modelType": "STRIDE",
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-ds-02",
+            "shape": "store",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 680,
+              "y": 260
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Redis Session &\nLock Store"
+              },
+              "topLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "a3f2d7db-1839-4cbb-b44b-872767daa825"
+                },
+                {
+                  "group": "right",
+                  "id": "f1fc2d1a-af23-4cca-b37b-260f827aa60b"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3185d387-62a4-46ff-be45-1ac6da374a84"
+                },
+                {
+                  "group": "left",
+                  "id": "6bffd59d-9037-4085-b6d2-ed89a7119c0b"
+                }
+              ]
+            },
+            "data": {
+              "name": "Redis Session &\nLock Store",
+              "description": "",
+              "type": "tm.Store",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "cell-tb-d1-01",
+            "shape": "trust-boundary-curve",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeDasharray": "5 5",
+                "strokeWidth": 2,
+                "targetMarker": "",
+                "sourceMarker": ""
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "Internal Zone Boundary",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "x": 280,
+              "y": 60
+            },
+            "target": {
+              "x": 280,
+              "y": 360
+            },
+            "vertices": [
+              {
+                "x": 280,
+                "y": 210
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internal Zone Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "id": "flow-d1-01",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "gRPC / mTLS",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "cell": "cell-p-01"
+            },
+            "target": {
+              "cell": "cell-p-03"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "gRPC / mTLS",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "mTLS",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d1-02",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "SQL Queries (TLS)",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "cell": "cell-p-03"
+            },
+            "target": {
+              "cell": "cell-ds-01"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "SQL Queries (TLS)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "TLS",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d1-03",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "RESP (Redis TLS)",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "cell": "cell-p-03"
+            },
+            "target": {
+              "cell": "cell-ds-02"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "RESP (Redis TLS)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "TLS",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "DFD Nivel 2 - Descomposición Motor Transaccional",
+        "diagramType": "STRIDE",
+        "placeholder": "Descomposicion profunda del motor de pagos, validaciones criptograficas, cerrojos y adaptador bancario.",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.3.0",
+        "cells": [
+          {
+            "id": "cell-p-03-1",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 80,
+              "y": 180
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Validador de Payloads\ny Firmas"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "a29917b3-ac4c-410d-bdad-ee7cd02fce4e"
+                },
+                {
+                  "group": "right",
+                  "id": "b09c2620-e154-43bc-be2e-da384d544be1"
+                },
+                {
+                  "group": "bottom",
+                  "id": "401101dd-b318-47c0-8ebf-a3a4469ae443"
+                },
+                {
+                  "group": "left",
+                  "id": "148b3b8c-a1d9-44d2-b8c0-d643c3ed837f"
+                }
+              ]
+            },
+            "data": {
+              "name": "Validador de Payloads\ny Firmas",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "cell-p-03-2",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 380,
+              "y": 180
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Gestor de Idempotencia\ny Cerrojos"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "03c318d5-6840-428d-8aac-c5373a6c58d7"
+                },
+                {
+                  "group": "right",
+                  "id": "21982513-5aa2-4314-8a53-5bcf06538927"
+                },
+                {
+                  "group": "bottom",
+                  "id": "d63018c2-e9d0-41cb-acf4-2ff9d3753688"
+                },
+                {
+                  "group": "left",
+                  "id": "ddc183fb-e39b-4fa5-8735-21bbdd0c7884"
+                }
+              ]
+            },
+            "data": {
+              "name": "Gestor de Idempotencia\ny Cerrojos",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "c95d56ee-907c-4b7d-914f-7203f6b9e411",
+                  "threatId": "038dd2f4-aa4a-4a37-9d9d-5e92c80c1ba0",
+                  "number": 5,
+                  "title": "Ataque de Doble Gasto por Concurrencia (TH-08)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Disparo múltiple de peticiones concurrentes para vaciar saldo por condición de carrera.",
+                  "mitigation": "Implementación de Redlock distribuido con TTL y bloqueos pesimistas en DB.",
+                  "modelType": "STRIDE",
+                  "score": "Critical (CVSS 9.0+)"
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-p-03-4",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 680,
+              "y": 180
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Adaptador ISO-8583"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "1d5dcb0f-3724-493e-b471-969e122ea4bb"
+                },
+                {
+                  "group": "right",
+                  "id": "1efaf2f9-46ba-455f-9dae-c2a8435757c2"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c2e134e0-842e-4581-b748-55b15961240b"
+                },
+                {
+                  "group": "left",
+                  "id": "63c3131c-2eec-45a1-8759-a2bd4fe367c2"
+                }
+              ]
+            },
+            "data": {
+              "name": "Adaptador ISO-8583",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "d0b4b970-178c-4ff7-a269-c6e0520cfe36",
+                  "threatId": "8cc0acca-2fef-4164-9329-5ae1eda878cb",
+                  "number": 6,
+                  "title": "Falsificación de Enlace Interbancario (TH-02)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Desvío de transferencias hacia un switch falso por falla en validación X.509.",
+                  "mitigation": "mTLS estricto con validación de CN y certificado anclado (Pinning).",
+                  "modelType": "STRIDE",
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-tb-d2-01",
+            "shape": "trust-boundary-curve",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeDasharray": "5 5",
+                "strokeWidth": 2,
+                "targetMarker": "",
+                "sourceMarker": ""
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "PCI-DSS Enclave Boundary",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "x": 580,
+              "y": 60
+            },
+            "target": {
+              "x": 580,
+              "y": 360
+            },
+            "vertices": [
+              {
+                "x": 580,
+                "y": 210
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "PCI-DSS Enclave Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "id": "flow-d2-01",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "Payload Validado",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "cell": "cell-p-03-1"
+            },
+            "target": {
+              "cell": "cell-p-03-2"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payload Validado",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "Internal",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d2-02",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "Transacción Confirmada",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": 0.5
+              }
+            ],
+            "source": {
+              "cell": "cell-p-03-2"
+            },
+            "target": {
+              "cell": "cell-p-03-4"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "Transacción Confirmada",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "Internal",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
