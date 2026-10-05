@@ -14,7 +14,7 @@
     ],
     "reviewer": "Comité de Arquitectura de Seguridad",
     "diagramTop": 3,
-    "threatTop": 16,
+    "threatTop": 25,
     "diagrams": [
       {
         "id": 0,
@@ -3207,21 +3207,21 @@
         "version": "2.3.0",
         "cells": [
           {
-            "id": "cell-p-03-1",
+            "id": "cell-d2-gw",
             "shape": "process",
             "zIndex": 5,
             "visible": true,
             "position": {
-              "x": 80,
-              "y": 180
+              "x": 460,
+              "y": 20
             },
             "size": {
-              "width": 160,
-              "height": 80
+              "width": 200,
+              "height": 75
             },
             "attrs": {
               "text": {
-                "text": "Validador de Payloads\ny Firmas"
+                "text": "P-01: API Gateway\n(Entrada desde TB-02)"
               },
               "body": {
                 "stroke": "#333333",
@@ -3295,24 +3295,24 @@
               "items": [
                 {
                   "group": "top",
-                  "id": "a29917b3-ac4c-410d-bdad-ee7cd02fce4e"
+                  "id": "abb503cd-c17d-4d34-b44b-54e9b7f940a9"
                 },
                 {
                   "group": "right",
-                  "id": "b09c2620-e154-43bc-be2e-da384d544be1"
+                  "id": "0a1b6d36-0979-4cc5-ab02-00406c6307e7"
                 },
                 {
                   "group": "bottom",
-                  "id": "401101dd-b318-47c0-8ebf-a3a4469ae443"
+                  "id": "7bd69023-d070-4ee7-b931-bde9c99becd4"
                 },
                 {
                   "group": "left",
-                  "id": "148b3b8c-a1d9-44d2-b8c0-d643c3ed837f"
+                  "id": "59045904-bd68-4683-8d72-7110b42060bc"
                 }
               ]
             },
             "data": {
-              "name": "Validador de Payloads\ny Firmas",
+              "name": "P-01: API Gateway\n(Entrada desde TB-02)",
               "description": "",
               "type": "tm.Process",
               "isTrustBoundary": false,
@@ -3323,267 +3323,7 @@
             }
           },
           {
-            "id": "cell-p-03-2",
-            "shape": "process",
-            "zIndex": 5,
-            "visible": true,
-            "position": {
-              "x": 380,
-              "y": 180
-            },
-            "size": {
-              "width": 160,
-              "height": 80
-            },
-            "attrs": {
-              "text": {
-                "text": "Gestor de Idempotencia\ny Cerrojos"
-              },
-              "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "strokeDasharray": null
-              }
-            },
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "03c318d5-6840-428d-8aac-c5373a6c58d7"
-                },
-                {
-                  "group": "right",
-                  "id": "21982513-5aa2-4314-8a53-5bcf06538927"
-                },
-                {
-                  "group": "bottom",
-                  "id": "d63018c2-e9d0-41cb-acf4-2ff9d3753688"
-                },
-                {
-                  "group": "left",
-                  "id": "ddc183fb-e39b-4fa5-8735-21bbdd0c7884"
-                }
-              ]
-            },
-            "data": {
-              "name": "Gestor de Idempotencia\ny Cerrojos",
-              "description": "",
-              "type": "tm.Process",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "id": "c95d56ee-907c-4b7d-914f-7203f6b9e411",
-                  "threatId": "038dd2f4-aa4a-4a37-9d9d-5e92c80c1ba0",
-                  "number": 5,
-                  "title": "Ataque de Doble Gasto por Concurrencia (TH-08)",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Denial of service",
-                  "description": "Disparo múltiple de peticiones concurrentes para vaciar saldo por condición de carrera.",
-                  "mitigation": "Implementación de Redlock distribuido con TTL y bloqueos pesimistas en DB.",
-                  "modelType": "STRIDE",
-                  "score": "Critical (CVSS 9.0+)"
-                }
-              ]
-            }
-          },
-          {
-            "id": "cell-p-03-4",
-            "shape": "process",
-            "zIndex": 5,
-            "visible": true,
-            "position": {
-              "x": 680,
-              "y": 180
-            },
-            "size": {
-              "width": 160,
-              "height": 80
-            },
-            "attrs": {
-              "text": {
-                "text": "Adaptador ISO-8583"
-              },
-              "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "strokeDasharray": null
-              }
-            },
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "1d5dcb0f-3724-493e-b471-969e122ea4bb"
-                },
-                {
-                  "group": "right",
-                  "id": "1efaf2f9-46ba-455f-9dae-c2a8435757c2"
-                },
-                {
-                  "group": "bottom",
-                  "id": "c2e134e0-842e-4581-b748-55b15961240b"
-                },
-                {
-                  "group": "left",
-                  "id": "63c3131c-2eec-45a1-8759-a2bd4fe367c2"
-                }
-              ]
-            },
-            "data": {
-              "name": "Adaptador ISO-8583",
-              "description": "",
-              "type": "tm.Process",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "id": "d0b4b970-178c-4ff7-a269-c6e0520cfe36",
-                  "threatId": "8cc0acca-2fef-4164-9329-5ae1eda878cb",
-                  "number": 6,
-                  "title": "Falsificación de Enlace Interbancario (TH-02)",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Spoofing",
-                  "description": "Desvío de transferencias hacia un switch falso por falla en validación X.509.",
-                  "mitigation": "mTLS estricto con validación de CN y certificado anclado (Pinning).",
-                  "modelType": "STRIDE",
-                  "score": ""
-                }
-              ]
-            }
-          },
-          {
-            "id": "cell-tb-d2-01",
+            "id": "cell-d2-tb02",
             "shape": "trust-boundary-curve",
             "zIndex": 10,
             "width": 200,
@@ -3612,7 +3352,7 @@
                 ],
                 "attrs": {
                   "labelText": {
-                    "text": "PCI-DSS Enclave Boundary",
+                    "text": "TB-02: Entrada desde API Gateway",
                     "textAnchor": "middle",
                     "textVerticalAnchor": "middle"
                   },
@@ -3624,33 +3364,1128 @@
                     "strokeWidth": 0
                   }
                 },
-                "position": 0.5
+                "position": {
+                  "distance": 0.1,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
               }
             ],
             "source": {
-              "x": 580,
-              "y": 60
+              "x": 60,
+              "y": 135
             },
             "target": {
-              "x": 580,
-              "y": 360
+              "x": 1140,
+              "y": 135
             },
             "vertices": [
               {
-                "x": 580,
-                "y": 210
+                "x": 600,
+                "y": 135
               }
             ],
             "data": {
               "type": "tm.Boundary",
-              "name": "PCI-DSS Enclave Boundary",
+              "name": "TB-02: Entrada desde API Gateway",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             }
           },
           {
-            "id": "flow-d2-01",
+            "id": "cell-tb-box-p03",
+            "shape": "trust-boundary-box",
+            "zIndex": 1,
+            "visible": true,
+            "position": {
+              "x": 60,
+              "y": 160
+            },
+            "size": {
+              "width": 1080,
+              "height": 830
+            },
+            "attrs": {
+              "body": {
+                "rx": 12,
+                "ry": 12,
+                "strokeWidth": 2.5,
+                "strokeDasharray": "10 5",
+                "stroke": "#555555",
+                "fill": "transparent",
+                "fillOpacity": 0
+              },
+              "label": {
+                "text": "P-03: MOTOR TRANSACCIONAL (DESCOMPOSICIÓN DE COMPONENTE CRÍTICO)",
+                "textAnchor": "start",
+                "textVerticalAnchor": "top",
+                "refX": 20,
+                "refY": 15,
+                "fill": "#222222",
+                "fontSize": 13,
+                "fontWeight": "bold"
+              }
+            },
+            "data": {
+              "name": "P-03: MOTOR TRANSACCIONAL (DESCOMPOSICIÓN DE COMPONENTE CRÍTICO)",
+              "description": "Límite de proceso y descomposición de sub-componentes internos del motor transaccional.",
+              "type": "tm.BoundaryBox",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "id": "cell-p-03-1",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 430,
+              "y": 200
+            },
+            "size": {
+              "width": 260,
+              "height": 220
+            },
+            "attrs": {
+              "text": {
+                "text": "P-03.1: Validador Criptográfico\nde Firmas y Tokens\n(DPoP / HMAC SHA-256)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "6fdf2188-a12b-4d8a-bbe3-bae5f35195b8"
+                },
+                {
+                  "group": "right",
+                  "id": "c448697e-c5e1-4a57-a9ac-d89f0d3221bb"
+                },
+                {
+                  "group": "bottom",
+                  "id": "de071dde-3ab1-4ab8-8f0d-ad0f8d063f66"
+                },
+                {
+                  "group": "left",
+                  "id": "940e4212-8b0f-48bb-829e-a7a7cc17bfc0"
+                }
+              ]
+            },
+            "data": {
+              "name": "P-03.1: Validador Criptográfico\nde Firmas y Tokens\n(DPoP / HMAC SHA-256)",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "0a8fa3a5-9a42-4b7d-8e7d-c4c83af1c92e",
+                  "threatId": "3d15dfc5-7428-44d9-8338-ddb4d5339c64",
+                  "number": 21,
+                  "title": "Manipulación de Monto o Cuenta en Tránsito (TH-03)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Alteración de payloads en tránsito antes o durante la verificación de firma criptográfica.",
+                  "mitigation": "Firma HMAC SHA-256 y DPoP con verificación estricta de llaves en enclave móvil seguro.",
+                  "modelType": "STRIDE",
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-p-03-2",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 430,
+              "y": 470
+            },
+            "size": {
+              "width": 260,
+              "height": 220
+            },
+            "attrs": {
+              "text": {
+                "text": "P-03.2: Gestor de Concurrencia\ne Idempotencia\n(Distributed Locking Engine)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "62930861-5d8f-4b50-964b-e2cb8905052e"
+                },
+                {
+                  "group": "right",
+                  "id": "71a05290-9d39-4f2e-822e-ad03932c672c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f7e605af-9f29-4327-b85f-75fc75f0c42f"
+                },
+                {
+                  "group": "left",
+                  "id": "e3125e1c-4dfa-472a-8817-6c0ebb74fd4f"
+                }
+              ]
+            },
+            "data": {
+              "name": "P-03.2: Gestor de Concurrencia\ne Idempotencia\n(Distributed Locking Engine)",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "0e6fdae6-a0ee-4c8b-ae8f-bb4a7ca2baf2",
+                  "threatId": "24d0fd6f-2411-4a28-8a04-120c37e841d6",
+                  "number": 22,
+                  "title": "Ataque de Doble Gasto por Concurrencia (TH-08)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Disparo de solicitudes simultáneas para vaciar balances antes de adquirir cerrojo atómico.",
+                  "mitigation": "Distributed Locking Engine con Redlock, TTL estricto y serialización de peticiones.",
+                  "modelType": "STRIDE",
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-ds-02",
+            "shape": "store",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 100,
+              "y": 540
+            },
+            "size": {
+              "width": 260,
+              "height": 85
+            },
+            "attrs": {
+              "text": {
+                "text": "DS-02: Clúster Redis\n(Almacén de Cerrojos Atómicos)"
+              },
+              "topLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "4339ae18-82d8-41c2-b6d4-929edf883058"
+                },
+                {
+                  "group": "right",
+                  "id": "8060b9f6-9756-4387-abcd-a9c710759d79"
+                },
+                {
+                  "group": "bottom",
+                  "id": "d1027a43-5d59-49f4-83f7-65fbf4e76fa6"
+                },
+                {
+                  "group": "left",
+                  "id": "d5e0271e-e1d1-4b1d-bfed-25a3e00cb79b"
+                }
+              ]
+            },
+            "data": {
+              "name": "DS-02: Clúster Redis\n(Almacén de Cerrojos Atómicos)",
+              "description": "",
+              "type": "tm.Store",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "cell-p-03-3",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 780,
+              "y": 470
+            },
+            "size": {
+              "width": 260,
+              "height": 220
+            },
+            "attrs": {
+              "text": {
+                "text": "P-03.3: Motor de Reglas de Negocio,\nValidación de Límites y Débito"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "e34fa49f-bd98-4da2-842b-ca770e22f788"
+                },
+                {
+                  "group": "right",
+                  "id": "4c374d69-266a-46f3-a24e-f6b98ca24fb6"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c65b8b1b-0f4a-4495-9f2c-845ff7509e2f"
+                },
+                {
+                  "group": "left",
+                  "id": "7ecbd91c-c9ab-4bb1-ac51-678ea44378d5"
+                }
+              ]
+            },
+            "data": {
+              "name": "P-03.3: Motor de Reglas de Negocio,\nValidación de Límites y Débito",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "6954c480-0206-4bce-921a-4172637fdcc1",
+                  "threatId": "21174a38-7d6e-43f1-85dc-4c457c0ec896",
+                  "number": 23,
+                  "title": "Vaciado de Cuentas Ajenas por IDOR/BOLA (TH-10)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Inyección de identificadores de cuenta arbitrarios en el motor de reglas de negocio.",
+                  "mitigation": "Validación contextual de claims del token firmado contra la cuenta del emisor.",
+                  "modelType": "STRIDE",
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-d2-tb03",
+            "shape": "trust-boundary-curve",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeDasharray": "5 5",
+                "strokeWidth": 2,
+                "targetMarker": "",
+                "sourceMarker": ""
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "TB-03: Límite de Persistencia",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.15,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 80,
+              "y": 730
+            },
+            "target": {
+              "x": 600,
+              "y": 730
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 730
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "TB-03: Límite de Persistencia",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "id": "cell-ds-01",
+            "shape": "store",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 160,
+              "y": 780
+            },
+            "size": {
+              "width": 280,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "DS-01: Base de Datos PostgreSQL\n(Actualización Contable del Ledger)"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "210b0388-6706-45f7-9c69-d6676e2af70a"
+                },
+                {
+                  "group": "right",
+                  "id": "4882b1d0-713f-4017-a084-3b5d7dda6f6e"
+                },
+                {
+                  "group": "bottom",
+                  "id": "820408fc-2957-4936-af9b-6dfa411db2fc"
+                },
+                {
+                  "group": "left",
+                  "id": "8d23d742-b069-4a24-8ddc-bf38033d52a4"
+                }
+              ]
+            },
+            "data": {
+              "name": "DS-01: Base de Datos PostgreSQL\n(Actualización Contable del Ledger)",
+              "description": "",
+              "type": "tm.Store",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "threats": [
+                {
+                  "id": "f21b440a-ecf8-4b65-b47c-c09a9344e52a",
+                  "threatId": "77f401f8-7659-45c8-a445-52bc6d69c318",
+                  "number": 24,
+                  "title": "Inyección SQL en Capa Contable (TH-04)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Manipulación de balances mediante entrada no sanitizada en sentencias de actualización contable.",
+                  "mitigation": "Sentencias preparadas parametrizadas y aislamiento SERIALIZABLE / SELECT FOR UPDATE.",
+                  "modelType": "STRIDE",
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-p-03-4",
+            "shape": "process",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 780,
+              "y": 750
+            },
+            "size": {
+              "width": 250,
+              "height": 210
+            },
+            "attrs": {
+              "text": {
+                "text": "P-03.4: Adaptador ISO-8583\n(Serializador a Trama Bancaria)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f0620a2a-1d30-461b-98c2-6abece0c969d"
+                },
+                {
+                  "group": "right",
+                  "id": "638b546d-d82b-48f6-ad6f-b05de78ed040"
+                },
+                {
+                  "group": "bottom",
+                  "id": "0a63314c-349b-4812-83c3-75f7563909ce"
+                },
+                {
+                  "group": "left",
+                  "id": "36a21415-50cb-49a8-88cb-6ba6bf5f8410"
+                }
+              ]
+            },
+            "data": {
+              "name": "P-03.4: Adaptador ISO-8583\n(Serializador a Trama Bancaria)",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "df3dd91b-9c9e-4aec-b633-b334c173f0b4",
+                  "threatId": "92973f04-0076-41a9-aa8c-d1d84f48da56",
+                  "number": 25,
+                  "title": "Falsificación de Enlace Interbancario (TH-02)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Desvío de tramas ISO-8583 hacia switch falso por falla en autenticación mTLS.",
+                  "mitigation": "mTLS estricto con validación de CN y certificado anclado (Certificate Pinning).",
+                  "modelType": "STRIDE",
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "id": "cell-d2-tb04",
+            "shape": "trust-boundary-curve",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeDasharray": "5 5",
+                "strokeWidth": 2,
+                "targetMarker": "",
+                "sourceMarker": ""
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "TB-04: Switch Bancario",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.15,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 600,
+              "y": 1030
+            },
+            "target": {
+              "x": 1140,
+              "y": 1030
+            },
+            "vertices": [
+              {
+                "x": 870,
+                "y": 1030
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "TB-04: Switch Bancario",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "id": "cell-ee-02",
+            "shape": "actor",
+            "zIndex": 5,
+            "visible": true,
+            "position": {
+              "x": 785,
+              "y": 1080
+            },
+            "size": {
+              "width": 240,
+              "height": 75
+            },
+            "attrs": {
+              "text": {
+                "text": "EE-02: Switch ACH\n(Switch Bancario)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2bca7288-6101-4aaf-8126-003746abaca0"
+                },
+                {
+                  "group": "right",
+                  "id": "fed0826a-86b0-49ef-9274-808059bfc006"
+                },
+                {
+                  "group": "bottom",
+                  "id": "547bdaaa-8dfb-4581-b58c-90982379bf73"
+                },
+                {
+                  "group": "left",
+                  "id": "44008897-e135-4467-9877-97ad066362bd"
+                }
+              ]
+            },
+            "data": {
+              "name": "EE-02: Switch ACH\n(Switch Bancario)",
+              "description": "",
+              "type": "tm.Actor",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d2-f03a",
             "shape": "flow",
             "zIndex": 10,
             "width": 200,
@@ -3659,7 +4494,8 @@
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1,
+                "strokeWidth": 1.5,
+                "sourceMarker": null,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -3680,7 +4516,7 @@
                 ],
                 "attrs": {
                   "labelText": {
-                    "text": "Payload Validado",
+                    "text": "F-03a: Petición con Payload Firmado y DPoP",
                     "textAnchor": "middle",
                     "textVerticalAnchor": "middle"
                   },
@@ -3692,7 +4528,88 @@
                     "strokeWidth": 0
                   }
                 },
-                "position": 0.5
+                "position": {
+                  "distance": 0.35,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "cell-d2-gw"
+            },
+            "target": {
+              "cell": "cell-p-03-1"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F-03a: Petición con Payload Firmado y DPoP",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "gRPC / mTLS",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d2-f03b",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "sourceMarker": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "F-03b: Transacción con Integridad Verificada",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.5,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
               }
             ],
             "source": {
@@ -3704,7 +4621,7 @@
             "vertices": [],
             "data": {
               "type": "tm.Flow",
-              "name": "Payload Validado",
+              "name": "F-03b: Transacción con Integridad Verificada",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -3718,7 +4635,7 @@
             }
           },
           {
-            "id": "flow-d2-02",
+            "id": "flow-d2-f05a",
             "shape": "flow",
             "zIndex": 10,
             "width": 200,
@@ -3727,7 +4644,8 @@
             "attrs": {
               "line": {
                 "stroke": "#333333",
-                "strokeWidth": 1,
+                "strokeWidth": 1.5,
+                "sourceMarker": null,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -3748,7 +4666,7 @@
                 ],
                 "attrs": {
                   "labelText": {
-                    "text": "Transacción Confirmada",
+                    "text": "F-05a: Adquisición de Cerrojo (Key + Nonce)",
                     "textAnchor": "middle",
                     "textVerticalAnchor": "middle"
                   },
@@ -3760,19 +4678,100 @@
                     "strokeWidth": 0
                   }
                 },
-                "position": 0.5
+                "position": {
+                  "distance": 0.45,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
               }
             ],
             "source": {
               "cell": "cell-p-03-2"
             },
             "target": {
-              "cell": "cell-p-03-4"
+              "cell": "cell-ds-02"
             },
             "vertices": [],
             "data": {
               "type": "tm.Flow",
-              "name": "Transacción Confirmada",
+              "name": "F-05a: Adquisición de Cerrojo (Key + Nonce)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "RESP / TLS",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d2-f03c",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "sourceMarker": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "F-03c: Petición Aprobada",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.45,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "cell-p-03-2"
+            },
+            "target": {
+              "cell": "cell-p-03-3"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F-03c: Petición Aprobada",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -3781,6 +4780,236 @@
               "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "Internal",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d2-f04a",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "sourceMarker": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "F-04a: Bloqueo Pesimista (SELECT FOR UPDATE)",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.65,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "cell-p-03-3"
+            },
+            "target": {
+              "cell": "cell-ds-01"
+            },
+            "vertices": [
+              {
+                "x": 740,
+                "y": 825
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F-04a: Bloqueo Pesimista (SELECT FOR UPDATE)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "SQL over TLS",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d2-f06a",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "sourceMarker": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "F-06a: Payload Validado",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.5,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "cell-p-03-3"
+            },
+            "target": {
+              "cell": "cell-p-03-4"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F-06a: Payload Validado",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "Internal",
+              "isTrustBoundary": false,
+              "threats": []
+            }
+          },
+          {
+            "id": "flow-d2-f07a",
+            "shape": "flow",
+            "zIndex": 10,
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "sourceMarker": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "labels": [
+              {
+                "markup": [
+                  {
+                    "tagName": "ellipse",
+                    "selector": "labelBody"
+                  },
+                  {
+                    "tagName": "text",
+                    "selector": "labelText"
+                  }
+                ],
+                "attrs": {
+                  "labelText": {
+                    "text": "F-07a: Enlace Seguro TCP (mTLS)",
+                    "textAnchor": "middle",
+                    "textVerticalAnchor": "middle"
+                  },
+                  "labelBody": {
+                    "ref": "labelText",
+                    "refRx": "50%",
+                    "refRy": "60%",
+                    "fill": "#fff",
+                    "strokeWidth": 0
+                  }
+                },
+                "position": {
+                  "distance": 0.45,
+                  "args": {
+                    "keepGradient": true,
+                    "ensureLegibility": true
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "cell-p-03-4"
+            },
+            "target": {
+              "cell": "cell-ee-02"
+            },
+            "vertices": [],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F-07a: Enlace Seguro TCP (mTLS)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "mTLS / ISO-8583",
               "isTrustBoundary": false,
               "threats": []
             }
